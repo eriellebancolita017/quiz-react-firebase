@@ -11,9 +11,9 @@ const firebaseConfig = {
   projectId: "quiz-liran-15",
   storageBucket: "quiz-liran-15.appspot.com",
   messagingSenderId: "767125988161",
-  appId: "1:767125988161:web:e29d89cf9a176f70d6f7c0"
+  appId: "1:767125988161:web:e29d89cf9a176f70d6f7c0",
 };
- 
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 

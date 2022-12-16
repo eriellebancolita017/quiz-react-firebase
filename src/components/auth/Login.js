@@ -20,19 +20,19 @@ const Login = (props) => {
       .catch((err) => {
         const errorCode = err.code;
         const errorMessage = err.message;
-        if(errorMessage === 'Firebase: Error (auth/user-not-found).') {
-          setError({email: 'User not found'})
-        } else if (errorMessage === 'Firebase: Error (auth/wrong-password).') {
-          setError({password: 'Wrong Password'})
+        if (errorMessage === "Firebase: Error (auth/user-not-found).") {
+          setError({ email: "User not found" });
+        } else if (errorMessage === "Firebase: Error (auth/wrong-password).") {
+          setError({ password: "Wrong Password" });
         }
-        console.log('err => ', errorMessage);
+        console.log("err => ", errorMessage);
       });
   };
 
   const onBack = (e) => {
-    e.preventDefault()
-    props.history.push("/")
-  }
+    e.preventDefault();
+    props.history.push("/");
+  };
 
   return (
     <>
@@ -42,7 +42,9 @@ const Login = (props) => {
             <span className="mdi mdi-cube-outline cube"></span>
           </div>
           <div>
-            <button className="back" onClick={onBack}>Back to Home</button>
+            <button className="back" onClick={onBack}>
+              Back to Home
+            </button>
             <h1> Login </h1>
             <form onSubmit={onLogin}>
               <div>
@@ -71,7 +73,9 @@ const Login = (props) => {
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
-              {error.password ? <p className="error">{error.password}</p> : null}
+              {error.password ? (
+                <p className="error">{error.password}</p>
+              ) : null}
 
               <div className="submit">
                 <button type="submit" className="submit-button">

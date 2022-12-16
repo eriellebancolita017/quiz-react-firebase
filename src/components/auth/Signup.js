@@ -23,10 +23,13 @@ const Signup = (props) => {
       .catch((err) => {
         const errorCode = err.code;
         const errorMessage = err.message;
-        if(errorMessage === 'Firebase: Error (auth/email-already-in-use).') {
-            setError({email:"This email is already exist"})
-        } else if(errorMessage === 'Firebase: Password should be at least 6 characters (auth/weak-password).') {
-            setError({password: 'Password should be at least 6 characters'})
+        if (errorMessage === "Firebase: Error (auth/email-already-in-use).") {
+          setError({ email: "This email is already exist" });
+        } else if (
+          errorMessage ===
+          "Firebase: Password should be at least 6 characters (auth/weak-password)."
+        ) {
+          setError({ password: "Password should be at least 6 characters" });
         }
         console.log(errorMessage);
         // ..
@@ -34,9 +37,9 @@ const Signup = (props) => {
   };
 
   const onBack = (e) => {
-    e.preventDefault()
-    props.history.push("/")
-  }
+    e.preventDefault();
+    props.history.push("/");
+  };
 
   return (
     <main className="auth">
@@ -45,9 +48,11 @@ const Signup = (props) => {
           <span className="mdi mdi-cube-outline cube"></span>
         </div>
         <div>
-          <button className="back" onClick={onBack}>Back to Home</button>
+          <button className="back" onClick={onBack}>
+            Back to Home
+          </button>
           <h1> Sign up </h1>
-          <form onSubmit={onSubmit} >
+          <form onSubmit={onSubmit}>
             <div>
               <label htmlFor="email-address">Email address</label>
               <input
@@ -77,9 +82,9 @@ const Signup = (props) => {
             {error.password ? <p className="error">{error.password}</p> : null}
 
             <div className="submit">
-                <button type="submit" className="submit-button">
+              <button type="submit" className="submit-button">
                 Sign up
-                </button>
+              </button>
             </div>
           </form>
 

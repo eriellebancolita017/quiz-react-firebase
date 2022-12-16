@@ -1,11 +1,11 @@
-import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import Home from './components/Home';
-import Play from './components/quiz/Play';
-import QuizSummary from './components/quiz/QuizSummary';
-import Login from './components/auth/Login';
-import Signup from './components/auth/Signup';
+import Home from "./components/Home";
+import Play from "./components/quiz/Play";
+import QuizSummary from "./components/quiz/QuizSummary";
+import Login from "./components/auth/Login";
+import Signup from "./components/auth/Signup";
 
 function App() {
   return (
